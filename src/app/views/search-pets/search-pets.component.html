@@ -1,5 +1,5 @@
 <app-header></app-header>
-<main class="bg-gray-100">
+<div class="bg-gray-100">
   <div>
     <!--
         Mobile filter dialog
@@ -488,9 +488,10 @@
               <button
                 type="button"
                 class="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900"
-                id="menu-button"
+                id="sort-menu-button"
                 aria-expanded="false"
                 aria-haspopup="true"
+                (click)="toggleSortMenu($event)"
               >
                 Sort
                 <svg
@@ -522,8 +523,9 @@
               class="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none"
               role="menu"
               aria-orientation="vertical"
-              aria-labelledby="menu-button"
+              aria-labelledby="sort-menu-button"
               tabindex="-1"
+              [ngClass]="sortMenuPopover ? '' : 'hidden'"
             >
               <div class="py-1" role="none">
                 <!--
@@ -1010,4 +1012,4 @@
       </section>
     </main>
   </div>
-</main>
+</div>
