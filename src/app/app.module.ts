@@ -12,9 +12,11 @@ import { FeatureComponent } from './components/feature/feature.component';
 import { CtaComponent } from './components/cta/cta.component';
 import { StatsComponent } from './components/stats/stats.component';
 import { LoginComponent } from './views/auth/login/login.component';
+import { SearchPetsComponent } from './views/search-pets/search-pets.component';
+import { BreedsComponent } from './views/breeds/breeds.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, BannerComponent, NotFoundComponent, NewsletterComponent, HomeComponent, FeatureComponent, CtaComponent, StatsComponent, LoginComponent],
+  declarations: [AppComponent, HeaderComponent, BannerComponent, NotFoundComponent, NewsletterComponent, HomeComponent, FeatureComponent, CtaComponent, StatsComponent, LoginComponent, SearchPetsComponent, BreedsComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

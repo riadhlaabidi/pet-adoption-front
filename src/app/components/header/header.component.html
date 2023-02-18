@@ -1,4 +1,4 @@
-<div class="relative bg-white text-p-blue-90 font-semibold">
+<header class="relative bg-white text-p-blue-90 font-semibold">
   <div class="mx-auto max-w-7xl px-6">
     <div
       class="flex items-center justify-between border-b-2 border-gray-100 py-3.5 md:space-x-10"
@@ -42,12 +42,12 @@
         </a>
       </nav>
       <div class="flex justify-center">
-        <a href="#">
+        <a routerLink="/home">
           <span class="sr-only">Pet Adoption</span>
           <img
             class="h-8 w-auto sm:h-10"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-            alt=""
+            src="../../../assets/img/brand.png"
+            alt="Logo"
           />
         </a>
       </div>
@@ -78,13 +78,19 @@
       </div>
 
       <div class="hidden items-center justify-end md:flex">
-        <a href="#" class="whitespace-nowrap text-sm hover:text-p-blue-50"
+        <a
+          routerLink="/breeds"
+          class="whitespace-nowrap text-sm hover:text-p-blue-50"
           >Breeds</a
         >
-        <a href="#" class="ml-8 whitespace-nowrap text-sm hover:text-p-blue-50"
+        <a
+          routerLink="/search"
+          class="ml-8 whitespace-nowrap text-sm hover:text-p-blue-50"
           >Search Pets</a
         >
-        <a href="#" class="ml-8 whitespace-nowrap text-sm hover:text-p-blue-50"
+        <a
+          class="ml-8 whitespace-nowrap text-sm hover:text-p-blue-50"
+          routerLink="/login"
           >Sign in</a
         >
         <a
@@ -146,7 +152,7 @@
             </button>
           </div>
         </div>
-        <div class="mt-6">
+        <div class="mt-8">
           <nav class="grid gap-y-8">
             <a
               href="#"
@@ -319,4 +325,4 @@
       </div>
     </div>
   </div>
-</div>
+</header>
