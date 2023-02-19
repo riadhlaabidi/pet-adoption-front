@@ -20,6 +20,9 @@ import {HttpClientModule, HTTP_INTERCEPTORS} from "@angular/common/http";
 import {AuthInterceptorService} from "./security/auth-interceptor.service";
 import { UserProfileComponent } from './views/user-profile/user-profile.component';
 import { MainComponent } from './views/home/main/main.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { LostPetsComponent } from './views/lost-pets/lost-pets.component';
+import { FoundPetComponent } from './views/found-pet/found-pet.component';
 
 
 @NgModule({
@@ -39,6 +42,9 @@ import { MainComponent } from './views/home/main/main.component';
     RecoverPasswordComponent,
     UserProfileComponent,
     MainComponent,
+    FooterComponent,
+    LostPetsComponent,
+    FoundPetComponent,
   ],
   imports: [
     BrowserModule,

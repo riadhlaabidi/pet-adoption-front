@@ -7,7 +7,7 @@
       class="flex items-center justify-between border-b-2 border-gray-100 py-3.5 md:space-x-10"
     >
       <nav class="hidden space-x-8 md:flex">
-        <a href="#" class="flex items-center text-sm hover:text-p-blue-50">
+        <a routerLink="lostPet" class="flex items-center text-sm hover:text-p-blue-50">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -27,7 +27,7 @@
 
           I've Lost Pets</a
         >
-        <a href="#" class="flex items-center text-sm hover:text-p-blue-50">
+        <a routerLink="foundPet" class="flex items-center text-sm hover:text-p-blue-50">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -112,7 +112,7 @@
       class="flex items-center justify-center border-b-2 border-gray-100 py-3.5 md:space-x-10 lg:hidden md:hidden"
     >
       <nav class="space-x-8 flex">
-        <a href="#" class="flex items-center text-sm hover:text-p-blue-50">
+        <a routerLink="lostPet" class="flex items-center text-sm hover:text-p-blue-50">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -132,7 +132,7 @@
 
           I've Lost Pets</a
         >
-        <a href="#" class="flex items-center text-sm hover:text-p-blue-50">
+        <a routerLink="foundPet" class="flex items-center text-sm hover:text-p-blue-50">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -324,7 +324,7 @@
         class="flex items-center justify-between border-b-2 border-gray-100 py-3.5 md:space-x-10"
       >
         <nav class="hidden space-x-8 md:flex">
-          <a href="#" class="flex items-center text-sm hover:text-p-blue-50">
+          <a routerLink="lostPet" class="flex items-center text-sm hover:text-p-blue-50">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -344,7 +344,7 @@
 
             I've Lost Pets</a
           >
-          <a href="#" class="flex items-center text-sm hover:text-p-blue-50">
+          <a routerLink="foundPet" class="flex items-center text-sm hover:text-p-blue-50">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -462,6 +462,7 @@
             >
               <!-- Active: "bg-gray-100", Not Active: "" -->
               <a
+                (click)="toggleMenu()"
                 routerLink="/profile"
                 class="block px-4 py-2 text-sm text-gray-700"
                 role="menuitem"
@@ -470,6 +471,7 @@
                 >Profile</a
               >
               <a
+                (click)="toggleMenu()"
                 routerLink="/pets"
                 class="block px-4 py-2 text-sm text-gray-700"
                 role="menuitem"
@@ -478,11 +480,30 @@
                 >Your Pets</a
               >
               <a
-                routerLink="/inqueries"
+                (click)="toggleMenu()"
+                routerLink="search"
                 class="block px-4 py-2 text-sm text-gray-700"
                 role="menuitem"
                 tabindex="-1"
                 id="user-menu-item-2"
+              >Search Pet</a
+              >
+              <a
+                (click)="toggleMenu()"
+                routerLink="breeds"
+                class="block px-4 py-2 text-sm text-gray-700"
+                role="menuitem"
+                tabindex="-1"
+                id="user-menu-item-3"
+              >Breeds</a
+              >
+              <a
+                (click)="toggleMenu()"
+                routerLink="/inqueries"
+                class="block px-4 py-2 text-sm text-gray-700"
+                role="menuitem"
+                tabindex="-1"
+                id="user-menu-item-4"
                 >Adoption Inqueries</a
               >
               <a
@@ -490,7 +511,7 @@
                 class="block px-4 py-2 text-sm text-gray-700"
                 role="menuitem"
                 tabindex="-1"
-                id="user-menu-item-3"
+                id="user-menu-item-5"
                 style="cursor: pointer"
                 >Sign out</a
               >
@@ -502,7 +523,7 @@
         class="flex items-center justify-center border-b-2 border-gray-100 py-3.5 md:space-x-10 lg:hidden md:hidden"
       >
         <nav class="space-x-8 flex">
-          <a href="#" class="flex items-center text-sm hover:text-p-blue-50">
+          <a routerLink="lostPet" class="flex items-center text-sm hover:text-p-blue-50">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -522,7 +543,7 @@
 
             I've Lost Pets</a
           >
-          <a href="#" class="flex items-center text-sm hover:text-p-blue-50">
+          <a routerLink="foundPet" class="flex items-center text-sm hover:text-p-blue-50">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

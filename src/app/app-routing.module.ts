@@ -11,16 +11,21 @@ import {AuthGuard} from "./security/auth.guard";
 import {LoginGuard} from "./security/login.guard";
 import {UserProfileComponent} from "./views/user-profile/user-profile.component";
 import {MainComponent} from "./views/home/main/main.component";
+import {LostPetsComponent} from "./views/lost-pets/lost-pets.component";
+import {FoundPetComponent} from "./views/found-pet/found-pet.component";
 
 const routes: Routes = [
   {
     path: '', component: HomeComponent, children: [
       {path: '', component: MainComponent},
-      {path: 'search', component: SearchPetsComponent},//, canActivate: [AuthGuard]
+      {path: 'search', component: SearchPetsComponent, canActivate: [AuthGuard]},//, canActivate: [AuthGuard]
       {path: 'breeds', component: BreedsComponent},//, canActivate: [AuthGuard]
+      {path: "profile", component: UserProfileComponent, canActivate: [AuthGuard]},
+      {path: "lostPet", component: LostPetsComponent, canActivate: [AuthGuard]},
+      {path: "foundPet", component: FoundPetComponent, canActivate: [AuthGuard]}
     ]
   },
-  {path: "profile", component: UserProfileComponent, canActivate: [AuthGuard]},
+
   {path: 'login', component: LoginComponent, canActivate: [LoginGuard]},
   {path: 'register', component: SignupComponent, canActivate: [LoginGuard]},
   {path: 'recover-password', component: RecoverPasswordComponent, canActivate: [LoginGuard]},
