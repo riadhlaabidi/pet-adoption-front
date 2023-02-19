@@ -5,7 +5,12 @@
 
         Off-canvas filters for mobile, show/hide based on off-canvas filters state.
       -->
-    <div class="relative z-40 lg:hidden" role="dialog" aria-modal="true">
+    <div
+      class="relative z-40 lg:hidden"
+      [ngClass]="filterMenuPopover ? '' : 'hidden'"
+      role="dialog"
+      aria-modal="true"
+    >
       <!--
           Off-canvas menu backdrop, show/hide based on off-canvas menu state.
 
@@ -37,6 +42,7 @@
             <button
               type="button"
               class="-mr-2 flex h-10 w-10 items-center justify-center rounded-md bg-white p-2 text-gray-400"
+              (click)="toggleFilterMenu()"
             >
               <span class="sr-only">Close menu</span>
               <svg
@@ -490,7 +496,7 @@
                 id="sort-menu-button"
                 aria-expanded="false"
                 aria-haspopup="true"
-                (click)="toggleSortMenu($event)"
+                (click)="toggleSortMenu()"
               >
                 Sort
                 <svg
@@ -601,6 +607,7 @@
           <button
             type="button"
             class="-m-2 ml-4 p-2 text-gray-400 hover:text-gray-500 sm:ml-6 lg:hidden"
+            (click)="toggleFilterMenu()"
           >
             <span class="sr-only">Filters</span>
             <svg

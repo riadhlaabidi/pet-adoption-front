@@ -7,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchPetsComponent implements OnInit {
   sortMenuPopover = false;
+  filterMenuPopover = false;
 
   ngOnInit(): void {}
-  toggleSortMenu(event: any) {
-    event.preventDefault();
+
+  toggleSortMenu() {
     this.sortMenuPopover = !this.sortMenuPopover;
+  }
+
+  toggleFilterMenu() {
+    this.filterMenuPopover = !this.filterMenuPopover;
   }
 }
