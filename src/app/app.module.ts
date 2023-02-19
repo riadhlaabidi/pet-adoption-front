@@ -19,6 +19,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule, HTTP_INTERCEPTORS} from "@angular/common/http";
 import {AuthInterceptorService} from "./security/auth-interceptor.service";
 import { UserProfileComponent } from './views/user-profile/user-profile.component';
+import { MainComponent } from './views/home/main/main.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { UserProfileComponent } from './views/user-profile/user-profile.componen
     SignupComponent,
     RecoverPasswordComponent,
     UserProfileComponent,
+    MainComponent,
   ],
   imports: [
     BrowserModule,

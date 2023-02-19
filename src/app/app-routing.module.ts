@@ -1,4 +1,3 @@
-
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {LoginComponent} from './views/auth/login/login.component';
@@ -11,24 +10,27 @@ import {NotFoundComponent} from "./views/not-found/not-found.component";
 import {AuthGuard} from "./security/auth.guard";
 import {LoginGuard} from "./security/login.guard";
 import {UserProfileComponent} from "./views/user-profile/user-profile.component";
+import {MainComponent} from "./views/home/main/main.component";
 
 const routes: Routes = [
+  {
+    path: '', component: HomeComponent, children: [
+      {path: '', component: MainComponent},
+      {path: 'search', component: SearchPetsComponent},//, canActivate: [AuthGuard]
+      {path: 'breeds', component: BreedsComponent},//, canActivate: [AuthGuard]
+    ]
+  },
+  {path: "profile", component: UserProfileComponent, canActivate: [AuthGuard]},
   {path: 'login', component: LoginComponent, canActivate: [LoginGuard]},
   {path: 'register', component: SignupComponent, canActivate: [LoginGuard]},
   {path: 'recover-password', component: RecoverPasswordComponent, canActivate: [LoginGuard]},
-  {path: 'home', component: HomeComponent,canActivateChild:[AuthGuard] ,children :[
-      {path: "profile", component: UserProfileComponent},
-    ]},
-  {path: 'search', component: SearchPetsComponent},
-  {path: 'breeds', component: BreedsComponent, canActivate: [AuthGuard]},
-
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: 'home', redirectTo: '/', pathMatch: 'full'},
   {path: "**", component: NotFoundComponent}]
-
 
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+}
