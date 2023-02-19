@@ -1,4 +1,7 @@
-<header *ngIf="!isLogin;else authUser" class="relative bg-white text-p-blue-90 font-semibold">
+<header
+  *ngIf="!isLogin; else authUser"
+  class="relative bg-white text-p-blue-90 font-semibold"
+>
   <div class="mx-auto max-w-7xl px-6">
     <div
       class="flex items-center justify-between border-b-2 border-gray-100 py-3.5 md:space-x-10"
@@ -81,24 +84,67 @@
         <a
           routerLink="/breeds"
           class="whitespace-nowrap text-sm hover:text-p-blue-50"
-        >Breeds</a
+          >Breeds</a
         >
         <a
           routerLink="/search"
           class="ml-8 whitespace-nowrap text-sm hover:text-p-blue-50"
-        >Search Pets</a
+          >Search Pets</a
         >
         <a
           class="ml-8 whitespace-nowrap text-sm hover:text-p-blue-50"
           routerLink="/login"
-        >Sign in</a
+          >Sign in</a
         >
         <a
           routerLink="/register"
           class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-p-blue-90 px-4 py-2 text-sm text-white shadow-sm hover:bg-p-blue-70"
-        >Sign up</a
+          >Sign up</a
         >
       </div>
+    </div>
+
+    <div
+      class="flex items-center justify-between border-b-2 border-gray-100 py-3.5 md:space-x-10 lg:hidden"
+    >
+      <nav class="hidden space-x-8 md:flex">
+        <a href="#" class="flex items-center text-sm hover:text-p-blue-50">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-5 h-5 mr-1"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+            />
+          </svg>
+
+          I've Lost Pets</a
+        >
+        <a href="#" class="flex items-center text-sm hover:text-p-blue-50">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-5 h-5 mr-1"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
+            />
+          </svg>
+
+          I've Found Pets
+        </a>
+      </nav>
     </div>
   </div>
 
@@ -173,7 +219,7 @@
                 />
               </svg>
               <span class="ml-3 text-base font-medium text-gray-900"
-              >Analytics</span
+                >Analytics</span
               >
             </a>
 
@@ -196,7 +242,7 @@
                 />
               </svg>
               <span class="ml-3 text-base font-medium text-gray-900"
-              >Engagement</span
+                >Engagement</span
               >
             </a>
 
@@ -219,7 +265,7 @@
                 />
               </svg>
               <span class="ml-3 text-base font-medium text-gray-900"
-              >Security</span
+                >Security</span
               >
             </a>
 
@@ -242,7 +288,7 @@
                 />
               </svg>
               <span class="ml-3 text-base font-medium text-gray-900"
-              >Integrations</span
+                >Integrations</span
               >
             </a>
 
@@ -265,7 +311,7 @@
                 />
               </svg>
               <span class="ml-3 text-base font-medium text-gray-900"
-              >Automations</span
+                >Automations</span
               >
             </a>
           </nav>
@@ -276,49 +322,49 @@
           <a
             href="#"
             class="text-base font-medium text-gray-900 hover:text-gray-700"
-          >Breeds</a
+            >Breeds</a
           >
 
           <a
             href="#"
             class="text-base font-medium text-gray-900 hover:text-gray-700"
-          >Docs</a
+            >Docs</a
           >
 
           <a
             href="#"
             class="text-base font-medium text-gray-900 hover:text-gray-700"
-          >Help Center</a
+            >Help Center</a
           >
 
           <a
             href="#"
             class="text-base font-medium text-gray-900 hover:text-gray-700"
-          >Guides</a
+            >Guides</a
           >
 
           <a
             href="#"
             class="text-base font-medium text-gray-900 hover:text-gray-700"
-          >Events</a
+            >Events</a
           >
 
           <a
             href="#"
             class="text-base font-medium text-gray-900 hover:text-gray-700"
-          >Security</a
+            >Security</a
           >
         </div>
         <div>
           <a
             routerLink="/register"
             class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-          >Sign up</a
+            >Sign up</a
           >
           <p class="mt-6 text-center text-base font-medium text-gray-500">
             Existing customer?
             <a href="#" class="text-indigo-600 hover:text-indigo-500"
-            >Sign in</a
+              >Sign in</a
             >
           </p>
         </div>
@@ -326,6 +372,7 @@
     </div>
   </div>
 </header>
+
 <ng-template #authUser>
   <header class="relative bg-white text-p-blue-90 font-semibold">
     <div class="mx-auto max-w-7xl px-6">
@@ -406,7 +453,7 @@
           </button>
         </div>
 
-        <div class="hidden items-center justify-end md:flex">
+        <div class="hidden items-center space-x-6 justify-end md:flex">
           <!--          <a-->
           <!--            routerLink="/breeds"-->
           <!--            class="whitespace-nowrap text-sm hover:text-p-blue-50"-->
@@ -418,22 +465,40 @@
           <!--          >Search Pets</a-->
           <!--          >-->
           <a
-            class="ml-8 whitespace-nowrap text-sm hover:text-p-blue-50"
+            class="flex items-center whitespace-nowrap text-sm hover:text-p-blue-50"
             routerLink="/Favourites"
           >
-            Favourites |
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="w-5 h-5 mr-1"
+            >
+              <path
+                d="M9.653 16.915l-.005-.003-.019-.01a20.759 20.759 0 01-1.162-.682 22.045 22.045 0 01-2.582-1.9C4.045 12.733 2 10.352 2 7.5a4.5 4.5 0 018-2.828A4.5 4.5 0 0118 7.5c0 2.852-2.044 5.233-3.885 6.82a22.049 22.049 0 01-3.744 2.582l-.019.01-.005.003h-.002a.739.739 0 01-.69.001l-.002-.001z"
+              />
+            </svg>
+
+            Favourites
           </a>
 
           <!-- Profile dropdown -->
           <div class="relative ml-3">
             <div>
-              <button type="button"
-                      class="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                      id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+              <button
+                type="button"
+                class="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                id="user-menu-button"
+                aria-expanded="false"
+                aria-haspopup="true"
+                (click)="toggleMenu()"
+              >
                 <span class="sr-only">Open user menu</span>
-                <img (click)="openCloseDrop()" class="h-8 w-8 rounded-full"
-                     src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                     alt="">
+                <img
+                  class="h-8 w-8 rounded-full"
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt="Profile image icon"
+                />
               </button>
             </div>
 
@@ -447,14 +512,48 @@
                 From: "transform opacity-100 scale-100"
                 To: "transform opacity-0 scale-95"
             -->
-            <div [ngClass]="{'hidden':!hiddendropdown}"
-                 class="absolute right-0 z-10 mt-2 w-48  origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                 role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+            <div
+              class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5"
+              role="menu"
+              aria-orientation="vertical"
+              aria-labelledby="user-menu-button"
+              tabindex="-1"
+              [ngClass]="menuPopover ? '' : 'hidden'"
+            >
               <!-- Active: "bg-gray-100", Not Active: "" -->
-              <a routerLink="/profile" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
-                 id="user-menu-item-0">Your Profile</a>
-              <a (click)="logout()" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
-                 id="user-menu-item-2" style="cursor: pointer">Sign out</a>
+              <a
+                routerLink="/profile"
+                class="block px-4 py-2 text-sm text-gray-700"
+                role="menuitem"
+                tabindex="-1"
+                id="user-menu-item-0"
+                >Profile</a
+              >
+              <a
+                routerLink="/profile"
+                class="block px-4 py-2 text-sm text-gray-700"
+                role="menuitem"
+                tabindex="-1"
+                id="user-menu-item-0"
+                >Your Pets</a
+              >
+              <a
+                routerLink="/profile"
+                class="block px-4 py-2 text-sm text-gray-700"
+                role="menuitem"
+                tabindex="-1"
+                id="user-menu-item-0"
+                >Adoption Inqueries</a
+              >
+              <a
+                (click)="logout()"
+                class="block px-4 py-2 text-sm text-gray-700"
+                role="menuitem"
+                tabindex="-1"
+                id="user-menu-item-2"
+                style="cursor: pointer"
+                >Sign out</a
+              >
             </div>
           </div>
           <!--          <a-->
@@ -463,6 +562,48 @@
           <!--          >Sign up</a-->
           <!--          >-->
         </div>
+      </div>
+      <div
+        class="flex items-center justify-center border-b-2 border-gray-100 py-3.5 md:space-x-10 lg:hidden md:hidden"
+      >
+        <nav class="space-x-8 flex">
+          <a href="#" class="flex items-center text-sm hover:text-p-blue-50">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-5 h-5 mr-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+              />
+            </svg>
+
+            I've Lost Pets</a
+          >
+          <a href="#" class="flex items-center text-sm hover:text-p-blue-50">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-5 h-5 mr-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
+              />
+            </svg>
+
+            I've Found Pets
+          </a>
+        </nav>
       </div>
     </div>
 
@@ -478,7 +619,7 @@
       -->
     <div
       class="fixed inset-0 z-10 overflow-y-auto bg-transparent lg:hidden"
-      [ngClass]="{'hidden':menuPopover}"
+      [ngClass]="menuPopover ? '' : 'hidden'"
     >
       <div
         class="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5"
@@ -523,21 +664,22 @@
                 class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
               >
                 <svg
-                  class="h-6 w-6 flex-shrink-0 text-indigo-600"
+                  xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  aria-hidden="true"
+                  class="w-6 h-6"
                 >
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"
+                    d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
+
                 <span class="ml-3 text-base font-medium text-gray-900"
-                >Your Profil</span
+                  >Profile</span
                 >
               </a>
 
@@ -546,21 +688,22 @@
                 class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
               >
                 <svg
-                  class="h-6 w-6 flex-shrink-0 text-indigo-600"
+                  xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  aria-hidden="true"
+                  class="w-6 h-6"
                 >
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
                   />
                 </svg>
+
                 <span class="ml-3 text-base font-medium text-gray-900"
-                >Favourites</span
+                  >Favourite Pets</span
                 >
               </a>
 
@@ -569,21 +712,22 @@
                 class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
               >
                 <svg
-                  class="h-6 w-6 flex-shrink-0 text-indigo-600"
+                  xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  aria-hidden="true"
+                  class="w-6 h-6"
                 >
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
                   />
                 </svg>
+
                 <span class="ml-3 text-base font-medium text-gray-900"
-                >I've Found Pet</span
+                  >Your Pets</span
                 >
               </a>
 
@@ -592,21 +736,22 @@
                 class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
               >
                 <svg
-                  class="h-6 w-6 flex-shrink-0 text-indigo-600"
+                  xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  aria-hidden="true"
+                  class="w-6 h-6"
                 >
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"
+                    d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
                   />
                 </svg>
+
                 <span class="ml-3 text-base font-medium text-gray-900"
-                >I've Lost Pet</span
+                  >Adoption Inqueries</span
                 >
               </a>
 
@@ -676,8 +821,8 @@
           <div>
             <a
               (click)="logout()"
-              class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-            >Log Out</a
+              class="flex w-full items-center justify-center rounded-md border border-transparent bg-p-blue-90 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-p-blue-70"
+              >Sign Out</a
             >
             <!--            <p class="mt-6 text-center text-base font-medium text-gray-500">-->
             <!--              Existing customer?-->
@@ -691,4 +836,3 @@
     </div>
   </header>
 </ng-template>
-

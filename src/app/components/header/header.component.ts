@@ -1,5 +1,5 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {AuthService} from "../../security/auth.service";
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AuthService } from '../../security/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -8,29 +8,22 @@ import {AuthService} from "../../security/auth.service";
 })
 export class HeaderComponent implements OnDestroy, OnInit {
   isLogin = false;
-  loginSubscribe: any
+  loginSubscribe: any;
   menuPopover = false;
-  hiddendropdown = false
 
-  constructor(private authService: AuthService) {
-  }
-
-  openCloseDrop() {
-    this.hiddendropdown = !this.hiddendropdown
-  }
+  constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
-    this.loginSubscribe = this.authService.isLoggedIn$.subscribe(res => {
-      this.isLogin = res
+    this.loginSubscribe = this.authService.isLoggedIn$.subscribe((res) => {
+      this.isLogin = res;
     });
   }
 
   ngOnDestroy(): void {
-    this.loginSubscribe.unsubscribe()
+    this.loginSubscribe.unsubscribe();
   }
 
-  ngAfterViewInit() {
-  }
+  ngAfterViewInit() {}
 
   toggleMenu() {
     this.menuPopover = !this.menuPopover;
