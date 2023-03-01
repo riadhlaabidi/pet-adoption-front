@@ -1,12 +1,10 @@
 <header
   *ngIf="!isLogin; else authUser"
-  class="relative bg-white text-p-blue-90 font-semibold"
+  class="relative bg-white text-p-blue-90 font-semibold sticky top-0 z-40 backdrop-blur border-b [@supports(backdrop-filter:blur(0))]:bg-white/80 sm:[@supports(backdrop-filter:blur(0))]:backdrop-blur"
 >
   <div class="mx-auto max-w-7xl px-6">
-    <div
-      class="flex items-center justify-between border-b-2 border-gray-100 py-3.5 md:space-x-10"
-    >
-      <nav class="hidden space-x-8 md:flex">
+    <div class="flex items-center justify-between py-3.5">
+      <nav class="hidden space-x-8 md:flex lg:w-2/5">
         <a
           routerLink="lostPet"
           class="flex items-center text-sm hover:text-p-blue-50"
@@ -54,7 +52,7 @@
           I've Found Pets
         </a>
       </nav>
-      <div class="flex justify-center">
+      <div class="flex justify-center lg:w-1/5">
         <a routerLink="/home">
           <span class="sr-only">Pet Adoption</span>
           <img
@@ -90,7 +88,7 @@
         </button>
       </div>
 
-      <div class="hidden items-center justify-end md:flex">
+      <div class="hidden items-center justify-end md:flex lg:w-2/5">
         <a
           routerLink="breeds"
           class="whitespace-nowrap text-sm hover:text-p-blue-50"
@@ -115,7 +113,7 @@
     </div>
 
     <div
-      class="flex items-center justify-center border-b-2 border-gray-100 py-3.5 md:space-x-10 lg:hidden md:hidden"
+      class="flex items-center justify-center py-3.5 md:space-x-10 lg:hidden md:hidden"
     >
       <nav class="space-x-8 flex">
         <a
@@ -179,7 +177,7 @@
         To: "opacity-0 scale-95"
     -->
   <div
-    class="fixed inset-0 z-10 overflow-y-auto bg-transparent lg:hidden"
+    class="fixed inset-0 z-10 bg-transparent lg:hidden"
     [ngClass]="menuPopover ? '' : 'hidden'"
   >
     <div
@@ -330,12 +328,12 @@
 </header>
 
 <ng-template #authUser>
-  <header class="relative bg-white text-p-blue-90 font-semibold">
+  <header
+    class="relative bg-white text-p-blue-90 font-semibold sticky top-0 z-40 backdrop-blur border-b [@supports(backdrop-filter:blur(0))]:bg-white/80 sm:[@supports(backdrop-filter:blur(0))]:backdrop-blur"
+  >
     <div class="mx-auto max-w-7xl px-6">
-      <div
-        class="flex items-center justify-between border-b-2 border-gray-100 py-3.5 md:space-x-10"
-      >
-        <nav class="hidden space-x-8 md:flex">
+      <div class="flex items-center justify-between py-3.5">
+        <nav class="lg:w-2/5 hidden space-x-8 md:flex">
           <a
             routerLink="lostPet"
             class="flex items-center text-sm hover:text-p-blue-50"
@@ -383,7 +381,7 @@
             I've Found Pets
           </a>
         </nav>
-        <div class="flex justify-center">
+        <div class="flex justify-center lg:w-1/5">
           <a routerLink="/home">
             <span class="sr-only">Pet Adoption</span>
             <img
@@ -419,7 +417,7 @@
           </button>
         </div>
 
-        <div class="hidden items-center space-x-6 justify-end md:flex">
+        <div class="hidden items-center space-x-6 justify-end md:flex lg:w-2/5">
           <a
             class="flex items-center whitespace-nowrap text-sm hover:text-p-blue-50"
             routerLink="/Favourites"
@@ -538,7 +536,7 @@
         </div>
       </div>
       <div
-        class="flex items-center justify-center border-b-2 border-gray-100 py-3.5 md:space-x-10 lg:hidden md:hidden"
+        class="flex items-center justify-center py-3.5 md:space-x-10 lg:hidden md:hidden"
       >
         <nav class="space-x-8 flex">
           <a
@@ -602,7 +600,7 @@
           To: "opacity-0 scale-95"
       -->
     <div
-      class="fixed inset-0 z-10 overflow-y-auto bg-transparent lg:hidden"
+      class="fixed inset-0 z-10 bg-transparent lg:hidden"
       [ngClass]="menuPopover ? '' : 'hidden'"
     >
       <div
